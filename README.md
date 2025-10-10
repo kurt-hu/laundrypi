@@ -1,3 +1,6 @@
+# Public HTTPS server
+https://raspberrypi.pleco-pain.ts.net/
+
 # How to connect
 ```
 ssh pi@raspberrypi.local
