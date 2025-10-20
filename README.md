@@ -27,6 +27,8 @@ tailscale funnel --https=443 off
 
 ```
 # Local development (initialize venv directory first if not present)
+# Start venv
+source venv/bin/activate
 /home/pi/laundrypi/venv/bin/python3 /home/pi/laundrypi/app.py
 
 # Production (restarts automatically): see /etc/systemd/system/laundrypiflask.service

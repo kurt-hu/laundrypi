@@ -1,4 +1,7 @@
+import time
+
 from flask import Flask, jsonify
+from gpiozero import Button
 
 app = Flask(__name__)
 
@@ -17,6 +20,13 @@ def health():
     return jsonify({
         'status': 'healthy',
         'service': 'Flask App'
+    })
+
+@app.route('/api/dryer', methods=['GET'])
+def isDrying():
+    button = Button(4)
+    return jsonify({
+        'isDrying': button.is_pressed
     })
 
 if __name__ == '__main__':
